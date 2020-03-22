@@ -1,0 +1,42 @@
+Bank Transactions
+Introduction
+This assignment will give you practice w/user and program interfaces, and choosing/building useful data
+structures.
+You will maintain a flat-file log, or database, allowing users to query, and add an entry.
+The Assignment
+Write a command-line utility called accounts that uses what is, essentially, a log file, a list of transactions
+(deposits and withdrawals).
+The account number will be the primary key; that is, no 2 accounts may have the same account number. 2
+different accounts may, however, have the same name. (E.g., you may have a checking account, and a savings
+account.)
+You will allow the user to view account info, and history, and to add transactions, as follows:
+Options, and Descriptions
+-i — Account info
+1. Display an enumerated, alphabetical list of account holders†, followed by the account number
+(Note, these lines should be unique)
+2. You will allow the user to choose an account by entering the number, or to quit by entering a q
+3. You will then list account info:
+1. Account #
+2. Account holder's name
+3. Balance
+4. Prompt to return to the list of account holders (so the user has time to read the output)
+-h — History
+1. Display the same account menu as above
+2. Allow the user to choose an account by entering the number, or to quit by entering a q
+3. If an account is selected, list all the transactions for that account, in chronological order (you may
+assume the transactions in the input file are in chronological order). You will print, on one line, the
+date, the type (deposit or withdrawal), and the amount
+-t — Insert transaction
+1. Again, get an account choice, as above, with an option to create a new account (be careful that the
+account # doesn't already exist)
+2. Then prompt for:
+1. Type (withdrawal or deposit), using simple keystrokes (w or d, followed by [enter])
+2. The amount
+3. Use the current day's date
+4. Return to the choose-account menu
+-? — Show usage msg and quit
+†You may assume that all names are entered exactly. That is, do not worry about inconsistencies in spelling or
+capitalisation. E.g., John Doe, Jonathon Doe, and john doe are 3 different clients for this assignment. Further,
+for purposes of alphabetising, take the name to be that single string. Don't attempt to extract first, last name
+information.
+If no argument is supplied, print a usage message and exit.
